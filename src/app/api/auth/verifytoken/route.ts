@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 import { NextRequest, NextResponse } from "next/server";
 
 dbConfig();
+const allowedOrigin = "http://localhost:3006";
 
 export async function GET(req: NextRequest) {
   const token = req.cookies.get("token")?.value;
@@ -12,9 +13,6 @@ export async function GET(req: NextRequest) {
   }
   try {
     const data = jwt.verify(token, process.env.JWT_SECRET!);
-    if (data.name === "Admin") {
-      return NextResponse.json({ data, status: 200 });
-    }
     const user = await User.findOne({ _id: data._id });
     return NextResponse.json({ data, user, status: 200 });
   } catch (err) {

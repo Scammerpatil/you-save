@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import ThemeToggler from "./ThemeToggler";
-import Image from "next/image";
 import { DownloadIcon, Menu } from "lucide-react";
 
 const Header = () => {
@@ -40,8 +39,10 @@ const Header = () => {
             <DownloadIcon size={48} />
             <div className="flex flex-col items-start gap-1 w-60">
               <div className="flex items-baseline gap-[2px]">
-                <span className="text-primary font-extrabold text-xl">You</span>
-                <span className="text-accent font-semibold text-xl">Save</span>
+                <span className="text-primary font-extrabold text-xl">
+                  Intelli
+                </span>
+                <span className="text-accent font-semibold text-xl">Mark</span>
               </div>
               <hr className="w-full border border-base-content" />
               <span className="text-sm text-base-content/70 italic">

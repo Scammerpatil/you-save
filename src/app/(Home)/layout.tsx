@@ -12,10 +12,10 @@ const Component = ({
   return (
     <html lang="en" data-theme="forest">
       <head>
-        <title>YouSave | Why remember when you can save?</title>
+        <title>IntelliMark | Why remember when you can save?</title>
         <meta
           name="description"
-          content="YouSave is a powerful Chrome extension and web app that automatically saves YouTube links when you save them on YouTube. With a secure login system, users can access all their saved videos anytime from our website. Perfect for organizing favorite content, study materials, and entertainment playlists in one place!"
+          content="IntelliMark is a powerful Chrome extension and web app that automatically saves YouTube links when you save them on YouTube. With a secure login system, users can access all their saved videos anytime from our website. Perfect for organizing favorite content, study materials, and entertainment playlists in one place!"
         />
       </head>
       <body className={`antialiased`}>

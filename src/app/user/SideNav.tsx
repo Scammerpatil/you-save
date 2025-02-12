@@ -5,7 +5,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import Image from "next/image";
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 import { useAuth } from "@/context/AuthProvider";
 import {
   ChevronDown,
@@ -24,7 +24,7 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
     const res = axios.get("/api/auth/logout");
     toast.promise(res, {
       loading: "Logging out...",
-      success: () => {
+      success: (data: AxiosResponse) => {
         router.push("/");
         return "Logged out successfully";
       },
@@ -70,8 +70,8 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
                 <span className="h-7 w-7 ">
                   <DownloadIcon size={28} className="text-base-content" />
                 </span>
-                <span className="text-primary">You</span>
-                <span className="text-secondary">Save</span>
+                <span className="text-primary">Intelli</span>
+                <span className="text-secondary">Mark</span>
               </h1>
               <ThemeToggler />
             </div>
@@ -148,8 +148,8 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
               </span>
               <span className="text-xl font-bold text-base-content">
                 <h1 className="text-xl font-bold">
-                  <span className="text-primary">You</span>
-                  <span className="text-secondary">Save</span>
+                  <span className="text-primary">Intelli</span>
+                  <span className="text-secondary">Mark</span>
                 </h1>
               </span>
             </Link>

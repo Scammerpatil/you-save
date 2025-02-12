@@ -1,9 +1,5 @@
 "use client";
-import Link from "next/link";
 import TypeWriter from "./TypeWriter";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 
 const Hero = () => {
   const text = [
@@ -30,23 +26,17 @@ const Hero = () => {
                   <TypeWriter text={text} />
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed font-extralight text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  YouSave is your ultimate tool for saving and organizing links
-                  effortlessly. With a seamless browser extension, real-time
-                  sync, and intuitive UI, we make sure you never lose track of
-                  important videos, articles, or websites. Save links from any
-                  platform, access them anytime, and stay organized like never
-                  before. Whether it's a must-watch video or an insightful
-                  article, YouSave keeps everything just a click away!
+                  IntelliMark is your ultimate tool for saving and organizing
+                  links effortlessly. With a seamless browser extension,
+                  real-time sync, and intuitive UI, we make sure you never lose
+                  track of important videos, articles, or websites. Save links
+                  from any platform, access them anytime, and stay organized
+                  like never before. Whether it's a must-watch video or an
+                  insightful article, IntelliMark keeps everything just a click
+                  away!
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <button
-                    className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-primary-content duration-300 ease-in-out hover:bg-primary/80"
-                    onClick={() => {
-                      (
-                        document.getElementById("login") as HTMLDialogElement
-                      ).showModal();
-                    }}
-                  >
+                  <button className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-primary-content duration-300 ease-in-out hover:bg-primary/80">
                     🚗 Get Started
                   </button>
                 </div>

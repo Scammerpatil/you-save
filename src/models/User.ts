@@ -23,13 +23,6 @@ const UserSchema = new mongoose.Schema(
       type: String,
       default: "",
     },
-    savedLinks: [
-      {
-        title: String,
-        url: String,
-        savedAt: { type: Date, default: Date.now },
-      },
-    ],
     createdAt: {
       type: Date,
       default: Date.now,

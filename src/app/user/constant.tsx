@@ -1,11 +1,4 @@
-import {
-  HomeIcon,
-  ListIcon,
-  BookmarkIcon,
-  BellIcon,
-  MessageSquareIcon,
-  SettingsIcon,
-} from "lucide-react";
+import { HomeIcon, ListIcon, BookmarkIcon } from "lucide-react";
 import { SideNavItem } from "@/types/types";
 
 export const SIDENAV_ITEMS: SideNavItem[] = [

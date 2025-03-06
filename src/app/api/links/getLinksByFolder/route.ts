@@ -3,6 +3,14 @@ import jwt from "jsonwebtoken";
 import SavedLinks from "@/models/SavedLinks";
 
 export async function GET(req: NextRequest) {
+  const searchParams = req.nextUrl.searchParams;
+  const folder = searchParams.get("folder");
+  if (!folder) {
+    return NextResponse.json(
+      { message: "Folder name cannot be empty" },
+      { status: 400 }
+    );
+  }
   const token = req.cookies.get("token")?.value;
   if (!token) {
     return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
@@ -15,7 +23,7 @@ export async function GET(req: NextRequest) {
     if (!data) {
       return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
-    const links = await SavedLinks.find({ user: data._id });
+    const links = await SavedLinks.find({ user: data._id, folder });
     return NextResponse.json({ links }, { status: 200 });
   } catch (error) {
     console.log(error);

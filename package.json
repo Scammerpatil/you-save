@@ -1,5 +1,5 @@
 {
-  "name": "you-save",
+  "name": "intelli-mark",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -20,7 +20,8 @@
     "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-hot-toast": "^2.5.1"
+    "react-hot-toast": "^2.5.1",
+    "recharts": "^2.15.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

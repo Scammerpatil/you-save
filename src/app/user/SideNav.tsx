@@ -7,13 +7,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import axios, { AxiosResponse } from "axios";
 import { useAuth } from "@/context/AuthProvider";
-import {
-  ChevronDown,
-  ChevronRight,
-  DownloadIcon,
-  Home,
-  Menu,
-} from "lucide-react";
+import { ChevronDown, ChevronRight, DownloadIcon, Menu } from "lucide-react";
 import ThemeToggler from "@/Components/Navbar/ThemeToggler";
 import toast from "react-hot-toast";
 
@@ -24,7 +18,7 @@ const SideNav = ({ children }: { children: React.ReactNode }) => {
     const res = axios.get("/api/auth/logout");
     toast.promise(res, {
       loading: "Logging out...",
-      success: (data: AxiosResponse) => {
+      success: () => {
         router.push("/");
         return "Logged out successfully";
       },

@@ -9,17 +9,22 @@ const SavedLinksSchema = new Schema({
   url: {
     type: String,
     required: true,
+    unique: true,
   },
   title: {
     type: String,
     required: true,
   },
-  platform: {
+  category: {
     type: String,
     required: true,
   },
-  tags: {
-    type: [String],
+  folder: {
+    type: String,
+  },
+  platform: {
+    type: String,
+    required: true,
   },
   createdAt: {
     type: Date,
